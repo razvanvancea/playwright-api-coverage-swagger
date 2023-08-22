@@ -7,7 +7,8 @@
 		"test": "npx playwright test --workers=1",
 		"lint": "npx eslint .",
 		"prettier:check": "npx prettier --check .",
-		"prettier:fix": "npx prettier --write ."
+		"prettier:fix": "npx prettier --write .",
+		"prepare": "husky install"
 	},
 	"keywords": [],
 	"author": "",
@@ -22,6 +23,7 @@
 		"eslint-config-prettier": "^9.0.0",
 		"prettier": "^3.0.2",
 		"typescript": "^5.1.6",
-		"zod": "^3.21.4"
+		"zod": "^3.21.4",
+		"husky": "^8.0.0"
 	}
 }
