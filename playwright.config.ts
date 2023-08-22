@@ -3,6 +3,7 @@ import { defineConfig, expect, devices } from '@playwright/test';
 import { ZodTypeAny } from 'zod';
 
 expect.extend({
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	async toMatchSchema(received: any, schema: ZodTypeAny) {
 		const response = await received.json();
 		const result = await schema.safeParseAsync(response);
