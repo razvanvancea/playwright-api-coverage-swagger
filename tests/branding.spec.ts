@@ -7,7 +7,7 @@ test.describe('brands suite', async () => {
 		console.log('before all ');
 	});
 
-	//COVERAGE_TAG: GET https://api.practicesoftwaretesting.co/brands/
+	//COVERAGE_TAG: GET /brands
 	test('GET branding', async ({ request }) => {
 		const resp = await request.get(`${process.env.URL}brands/`);
 		expect(resp.status()).toBe(200);

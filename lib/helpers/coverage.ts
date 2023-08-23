@@ -53,14 +53,15 @@ export function getEndpoints(json) {
 	const spec3 = json;
 
 	const methods = spec3.paths;
-	const urlPath = spec3.servers[0].url.slice(0, -1);
+	// const urlPath = spec3.servers[0].url.slice(0, -1);
 
 	const finalArray: string[] = [];
 	for (const property in methods) {
 		const verbs = Object.keys(methods[property]);
 		for (const verb of verbs) {
 			const finalVerb = verb.toUpperCase();
-			const finalPath = urlPath + property;
+			// const finalPath = urlPath + property;
+			const finalPath = property;
 			finalArray.push(finalVerb + ' ' + finalPath);
 		}
 	}
